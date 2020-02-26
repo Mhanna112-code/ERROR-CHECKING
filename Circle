@@ -1,0 +1,36 @@
+import java.awt.Shape;
+
+public class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius){
+        super();
+        try {
+            this.radius = radius;
+        }
+        catch (IllegalArgumentException e){
+            System.out.print(e.getMessage() + ". Error: Negative number.");
+        }
+    }
+
+    public double getRadius(){
+        return radius;
+    }
+
+    @Override
+    public String getType(){
+        return "Circle";
+    }
+
+    @Override
+    public double getPerimeter(){
+        return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public double getArea(){
+        return Math.PI * radius * radius;
+    }
+    }
+
+
